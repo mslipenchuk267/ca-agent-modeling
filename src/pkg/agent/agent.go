@@ -7,11 +7,12 @@ import (
 
 type Agent struct {
 	Coords []int
+	Activation int
+	Suggestibility float32
 }
 
 func (agent Agent) ToString() {
 	strCoords := strings.Trim(fmt.Sprint(agent.Coords), "[]")
-	agentStr := "Agent Coords: " + strCoords
-	fmt.Println(agentStr)
+	fmt.Printf("Agent Info\n\tCoords: %s\n\tActivation: %d\n\tSuggestibility: %f\n", strCoords, agent.Activation, agent.Suggestibility)
 }
 
